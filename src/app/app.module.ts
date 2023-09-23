@@ -3,11 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
-import { ServesComponent } from './serves/serves.component';
+import { ServersComponent } from './servers/servers.component';
+import { SucessAlertComponent } from './sucess-alert/sucess-alert.component';
+import { WaringAlertComponent } from './warning-alert/warning-alert.cmponent';
 
-//here's where i must add all the components i created for them to be rendered.
 @NgModule({
-  declarations: [AppComponent, ServerComponent, ServesComponent],
+  declarations: [
+    AppComponent,
+    ServerComponent,
+    ServersComponent,
+    WaringAlertComponent,
+    SucessAlertComponent,
+  ],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
