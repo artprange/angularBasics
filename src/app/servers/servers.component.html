@@ -1,27 +1,33 @@
 <div class="main-container">
-  <form class="form-container">
-    <label>Server Name</label>
-    <!-- <input
+  <label>Server Name</label>
+  <!-- <input
     type="text"
     class="form-control"
     (input)="onUpdateServerName($event)"
   /> -->
 
-    <input type="text" class="form-control" [(ngModel)="serverName" ] />
-    <p>{{ serverName }}</p>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName"
+    name="serverName"
+  />
 
-    <button
-      class="btn-btn-primary"
-      [disabled]="!allowNewServer"
-      (click)="onCreateServer()"
-    >
-      Add Server
-    </button>
+  <!--as you use ngModel YOU MUST use a "name" which will be the method that the elemnt recieves! you spend a good 45 min. with this!!!-->
 
-    <!-- <p [innerText]="allowNewServer">{{ allowNewServer }}</p> -->
+  <p>{{ serverName }}</p>
 
-    <p>{{ serverCreationStatus }}</p>
+  <button
+    class="btn-btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+  >
+    Add Server
+  </button>
 
-    <app-server></app-server> <app-server></app-server>
-  </form>
+  <!-- <p [innerText]="allowNewServer">{{ allowNewServer }}</p> -->
+
+  <p>{{ serverCreationStatus }}</p>
+
+  <app-server></app-server> <app-server></app-server>
 </div>
