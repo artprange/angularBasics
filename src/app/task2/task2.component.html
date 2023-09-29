@@ -1,0 +1,14 @@
+<!-- <button class="btn-btn-primary" (click)="showSecret = !showSecret">
+  Show details
+</button> -->
+
+<button class="btn-btn-primary" (click)="onToggleDetails()">
+  Show details
+</button>
+
+<p *ngIf="showSecret">Secret password= bacon</p>
+<!-- <div *ngFor="let logItem of log" [ngStyle]="{ backgroundColor: logItem >= 5 }">
+  {{ logItem }}
+</div> -->
+
+<!--  LINE 10 if i want to use standard css i should use `template literals` instead of brackets. -->
