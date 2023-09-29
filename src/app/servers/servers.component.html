@@ -1,4 +1,34 @@
 <div class="main-container">
+  <!-- <label>User name</label>
+
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="userName"
+    name="userName"
+    placeholder="insert your name"
+  /> -->
+
+  <!-- the following block will set a timeout to the button to be enabled -->
+  <!-- 
+  <button
+    class="btn-btn-primary"
+    [disabled]="!allowNewUser"
+    (click)="onCreateUser()"
+  >
+    Add user
+  </button> -->
+
+  <!-- <button
+    class="btn-btn-primary"
+    [disabled]="userName === ''"
+    (click)="onCreateUser()"
+  >
+    Add user
+  </button>
+
+  <p>{{ userCreationStatus }}</p> -->
+
   <label>Server Name</label>
   <!-- <input
     type="text"
@@ -11,11 +41,12 @@
     class="form-control"
     [(ngModel)]="serverName"
     name="serverName"
+    placeholder="insert server name"
   />
 
   <!--as you use ngModel YOU MUST use a "name" which will be the method that the elemnt recieves! you spend a good 45 min. with this!!!-->
-
-  <p>{{ serverName }}</p>
+  <!-- 
+  <p>{{ serverName }}</p> -->
 
   <button
     class="btn-btn-primary"
@@ -27,7 +58,11 @@
 
   <!-- <p [innerText]="allowNewServer">{{ allowNewServer }}</p> -->
 
-  <p>{{ serverCreationStatus }}</p>
+  <!-- <p>{{ serverCreationStatus }}</p> -->
+  <p *ngIf="serverCreted; else noServer">
+    Server was created, server name is{{ serverName }}
+  </p>
+  <ng-template #noServer><p>No server was created!</p></ng-template>
 
-  <app-server></app-server> <app-server></app-server>
+  <app-server *nngFor="let server of servers"></app-server>
 </div>

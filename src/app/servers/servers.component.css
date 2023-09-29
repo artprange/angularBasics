@@ -13,6 +13,7 @@ label {
 }
 
 .btn-btn-primary {
+  margin-top: 30px;
   color: #fff;
   background-color: dodgerblue;
   border-radius: 15px;

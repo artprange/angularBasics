@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
   // styles: [
   //   `
-  //    h3 {
+  //     h3 {
   //       color: dodgerblue;
-  //    }
+  //     }
   //   `,
-  //],
+  // ],
 })
 export class AppComponent {
   title = 'my-first-app';
