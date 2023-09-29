@@ -7,8 +7,15 @@
 </button>
 
 <p *ngIf="showSecret">Secret password= bacon</p>
-<!-- <div *ngFor="let logItem of log" [ngStyle]="{ backgroundColor: logItem >= 5 }">
+<div
+  *ngFor="let logItem of log; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+  [ngClass]="{ 'white-text': i >= 4 }"
+>
   {{ logItem }}
-</div> -->
+</div>
 
-<!--  LINE 10 if i want to use standard css i should use `template literals` instead of brackets. -->
+<!--  LINE 12 if i want to use standard css i should use `template literals` instead of brackets. -->
+<!-- LINE 11 i added the let i = index so then it can acess the current index of the
+current iteration -->
+<!-- LINE 12 i'm checking if the index is grater than 5 as the initial index of an array is 0 -->

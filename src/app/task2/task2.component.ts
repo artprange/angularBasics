@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class Task2Component {
   showSecret = false;
-  log: number[] = [];
+  // log: (number | Date)[] = [];
+  log: any[] = [];
 
   onToggleDetails() {
     this.showSecret = !this.showSecret;
-    this.log.push(this.log.length + 1);
+    // this.log.push(this.log.length + 1);
+    this.log.push(new Date());
   }
 }
